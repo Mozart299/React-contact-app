@@ -1,19 +1,22 @@
 import React from "react";
 
-const CardContact = () => {
+const ContactCard = (props) => {
+
+    const { id, name, email } = props.contact;
+
     return (
         <div className="item">
             <div className="content">
                 <div className="header">
-                    {contact.name}
+                    {name}
                 </div>
                 <div>
-                    {contact.email}
+                    {email}
                 </div>
             </div>
-            <i className="trash alternate outline icon"></i>
+            <i className="trash alternate outline icon" style={{color:"red", marginTop: "7px" }}></i>
         </div>
     );
 }
 
-export default contactCard;
+export default ContactCard;
